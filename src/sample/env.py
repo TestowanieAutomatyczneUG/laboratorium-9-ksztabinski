@@ -5,10 +5,10 @@ class Env:
     def playWavFile(self, file):
         pass
 
-    def wavWasPlayed(self):
+    def wavWasPlayed(self,file):
         pass
 
-    def resetWav(self):
+    def resetWav(self,file):
         pass
 
 
@@ -21,9 +21,9 @@ class Checker:
 
         if int(time) > 17:
             self.mp3.playWavFile(file)
-            self.mp3.wavWasPlayed()
+            return self.mp3.wavWasPlayed()
         else:
-            self.mp3.resetWav()
+            return self.mp3.resetWav()
 
 
 

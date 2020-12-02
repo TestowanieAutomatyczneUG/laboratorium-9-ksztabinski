@@ -11,7 +11,7 @@ class CheckerTest(unittest.TestCase):
         checker.mp3.getTime.return_value = 18
         checker.mp3.wavWasPlayed = Mock(name='wavWasPlayed')
         checker.mp3.wavWasPlayed.return_value = True
-        res = checker.mp3.wavWasPlayed(file)
+        res = checker.remainder(file)
         self.assertEqual(res, True)
 
     def test_checker_before_17(self):
